@@ -10,20 +10,32 @@
 </head>
 
 <body>
-    <div id="banner">
-        <header>¡Bienvenido a mi Hoja de Vida!</header>
-    </div>
-    <div id="menu">
-        <ol id="listaMenu">
-            <li><a href="design.html">Mi diseño</a></li>
-            <li><a href="glosary.html">Glosario</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-            <li><a href="#">Proyectos</a></li>
-            <li><a href="knowledges.html">Conocimientos</a></li>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><img src="../Imagenes/logo.png" width="130px"></li>
-        </ol>
-    </div>
+    <header>
+        <div id="banner" class="container-fluid">
+            <header>¡Bienvenido a mi Hoja de Vida!</header>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #C00;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapseNav">
+                <ol id="listaMenu" class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html"><i class="fa fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="knowledges.html"><i
+                                class="fa fa-book"></i> Conocimientos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="proyects.html"><i
+                                class="fa fa-code"></i> Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html"><i
+                                class="fa fa-vcard"></i> Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="glosary.html"><i
+                                class="fa fa-sort-alpha-asc"></i> Glosario</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="design.html"><i
+                                class="fa fa-pencil"></i> Mi diseño</a></li>
+                </ol>
+            </div>
+        </nav>
+    </header>
     <br>
     <br>
     <div>
