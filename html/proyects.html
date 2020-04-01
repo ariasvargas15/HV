@@ -4,9 +4,17 @@
 <head>
     <meta charset="utf-8">
     <title>CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="../css/index.css" rel="stylesheet" />
+    <link href="../css/custom.css" rel="stylesheet" />
+    <style>
+        /* Make the image fully responsive */
+        .carousel-inner img {
+          width: 100%;
+          height: 100%;
+        }
+        </style>
 </head>
 
 <body>
@@ -20,29 +28,84 @@
             </button>
             <div class="collapse navbar-collapse" id="collapseNav">
                 <ol id="listaMenu" class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="../index.html"><i class="fa fa-home"></i> Inicio</a>
+                    <li class="nav-item"><a class="nav-link text-white" href="../index.html"><i class="fa fa-home"></i>
+                            Inicio</a>
                     </li>
                     <li class="nav-item"><a class="nav-link text-white" href="knowledges.html"><i
                                 class="fa fa-book"></i> Conocimientos</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="proyects.html"><i
-                                class="fa fa-code"></i> Proyectos</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="contact.html"><i
-                                class="fa fa-vcard"></i> Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="proyects.html"><i class="fa fa-code"></i>
+                            Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html"><i class="fa fa-vcard"></i>
+                            Contacto</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="glosary.html"><i
                                 class="fa fa-sort-alpha-asc"></i> Glosario</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="design.html"><i
-                                class="fa fa-pencil"></i> Mi diseño</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="design.html"><i class="fa fa-pencil"></i>
+                            Mi diseño</a></li>
                 </ol>
             </div>
         </nav>
     </header>
     <br>
     <br>
-    <div>
-        <h1>Proyectos que he desarrollado</h1>
+    <div class="container">
+        <h1><i class="fa fa-keyboard-o"></i> Proyectos que he desarrollado</h1>
         <br>
-        <div class="tabla1">
-            <table>
+        <div id="demo" class="carousel slide row col-6" data-ride="carousel">
+            <ul class="carousel-indicators bg-dark">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+                <li data-target="#demo" data-slide-to="4"></li>
+            </ul>
+            <div class="carousel-inner ">
+                <div class="carousel-item active">
+                    <img src="../Imagenes/hangman.png" alt="Los Angeles" width="500" height="500">
+                    <div class="carousel-caption">
+                        <h3>Ahorcado</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../Imagenes/divisist.jpg" alt="Chicago" width="500" height="500">
+                    <div class="carousel-caption">
+                        <h3>Divisist</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../Imagenes/ppt.jpg" alt="New York" width="500" height="500">
+                    <div class="carousel-caption">
+                        <h3>Piedra, Papel o Tijeras</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../Imagenes/blackjack.jpg" alt="New York" width="500" height="500">
+                    <div class="carousel-caption">
+                        <h3>Blackjack</h3>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../Imagenes/timbi.png" alt="New York" width="500" height="500">
+                    <div class="carousel-caption">
+                        <h3>Timbiriche</h3>
+                    </div>
+                </div>
+            </div>
+            <a class="bg-dark carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="bg-dark carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
+    </div>
+    
+
+    <div class="container" id="contenido">
+        
+        <br>
+        <div class="tabla1 table-responsive">
+            <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
                         <th class="celda">#</th>
@@ -57,16 +120,19 @@
                         <td>1</td>
                         <td>Ahorcado</td>
                         <td>
-                          La palabra para adivinar está representada por una fila de guiones,
-                          que representan cada letra de la palabra. Si el jugador que adivina sugiere una letra que aparece
-                          en la palabra, el otro jugador la escribe en todas sus posiciones correctas. Si la letra o el
-                          número sugerido no aparece en la palabra, el otro jugador dibuja un elemento de una figura
-                          de palo de hombre colgado como una marca de conteo. El jugador que adivine la palabra puede,
-                          en cualquier momento, intentar adivinar la palabra completa. Si la palabra es correcta,
-                          el juego ha terminado y el que adivina gana. De lo contrario, el otro jugador puede elegir
-                          penalizar al que adivina agregando un elemento al diagrama. Por otro lado, si el otro jugador
-                           hace suficientes conjeturas incorrectas para permitir que su oponente complete el diagrama,
-                           el juego también termina, esta vez con el que adivina perdiendo. </td>
+                            La palabra para adivinar está representada por una fila de guiones,
+                            que representan cada letra de la palabra. Si el jugador que adivina sugiere una letra que
+                            aparece
+                            en la palabra, el otro jugador la escribe en todas sus posiciones correctas. Si la letra o
+                            el
+                            número sugerido no aparece en la palabra, el otro jugador dibuja un elemento de una figura
+                            de palo de hombre colgado como una marca de conteo. El jugador que adivine la palabra puede,
+                            en cualquier momento, intentar adivinar la palabra completa. Si la palabra es correcta,
+                            el juego ha terminado y el que adivina gana. De lo contrario, el otro jugador puede elegir
+                            penalizar al que adivina agregando un elemento al diagrama. Por otro lado, si el otro
+                            jugador
+                            hace suficientes conjeturas incorrectas para permitir que su oponente complete el diagrama,
+                            el juego también termina, esta vez con el que adivina perdiendo. </td>
                         <td>Junio 2015</td>
                         <td style="text-align: center"><img src="../Imagenes/hangman.png" width="200px"></td>
                     </tr>
@@ -74,45 +140,55 @@
                         <td>2</td>
                         <td>Divisist</td>
                         <td>
-                          Este proyecto consistió en recrear el Sistema de Información Universitario, donde podía
-                          ver mi agenda, qué asignaturas estaba viendo, tenía que permitirme, agregar asignaturas,
-                          anularlas, observar mis calificaciones, mis maestros, entre otros. Otras funcionalidades
-                          para estudiantes. Para los maestros, tenía que dejarlo ver su horario también, para cambiar
-                          las calificaciones y para ver a sus propios alumnos y para que el Director del Programa
-                          pudiera crear un grupo de clases, asignar maestros y aulas, eliminar grupos, observar
-                          a todos los maestros y Los estudiantes, para modificar maestros, estudiantes, grupos,
-                          salas de clase, para abrir ingludings y anulaciones. La página de administrador puede
-                          gestionar todas las funcionalidades, como crear edificios, aulas, directores, profesores
-                          y estudiantes.
+                            Este proyecto consistió en recrear el Sistema de Información Universitario, donde podía
+                            ver mi agenda, qué asignaturas estaba viendo, tenía que permitirme, agregar asignaturas,
+                            anularlas, observar mis calificaciones, mis maestros, entre otros. Otras funcionalidades
+                            para estudiantes. Para los maestros, tenía que dejarlo ver su horario también, para cambiar
+                            las calificaciones y para ver a sus propios alumnos y para que el Director del Programa
+                            pudiera crear un grupo de clases, asignar maestros y aulas, eliminar grupos, observar
+                            a todos los maestros y Los estudiantes, para modificar maestros, estudiantes, grupos,
+                            salas de clase, para abrir ingludings y anulaciones. La página de administrador puede
+                            gestionar todas las funcionalidades, como crear edificios, aulas, directores, profesores
+                            y estudiantes.
                         </td>
                         <td>Noviembre 2015</td>
                         <td><img src="../Imagenes/divisist.jpg" width="300px"></td>
-                      </tr>
-                      <tr>
+                    </tr>
+                    <tr>
                         <td>3</td>
                         <td>Piedra, pepel 0 tijeras</td>
                         <td>
-                          En este juego simple, elige una de las tres opciones (piedra, papel o tijera)
-                          y la máquina elige una al azar y te devuelve el resultado del juego, si ganaste,
-                          perdiste o empataste
+                            En este juego simple, elige una de las tres opciones (piedra, papel o tijera)
+                            y la máquina elige una al azar y te devuelve el resultado del juego, si ganaste,
+                            perdiste o empataste
                         </td>
                         <td>Diciembre 2015</td>
                         <td style="text-align: center"><img src="../Imagenes/ppt.jpg" width="250px"></td>
                     </tr>
-                        <tr>
+                    <tr>
                         <td>4</td>
                         <td>Blackjack</td>
                         <td>
-                          Es un juego de cartas, con una baraja inglesa de 52 cartas sin los comodines, que consiste en agregar
-                          un valor cercano a 21 pero sin pasar. Cada jugador en la mesa juega solo contra el crupier, tratando
-                          de obtener una mejor jugada que esta. El distribuidor está sujeto a reglas fijas que le impiden
-                          tomar decisiones sobre el juego. Por ejemplo, está obligado a pedir una carta siempre que su puntaje
-                          sea 16 o menos, y se le obliga a ponerse de pie si agrega 17 o más. Las cartas numéricas agregan su valor,
-                          las cifras suman 10 y el As vale 11 o 1, a elección del jugador. En el caso del croupier, los Ases valen
-                          11, mientras que no exceden de 21, y 1 de lo contrario. El mejor movimiento es obtener 21 con solo dos
-                          cartas, esto es con una carta de valor más de As 10. Este movimiento se conoce como Blackjack o 21 natural.
-                          Un Blackjack gana sobre un 21 logrado con más de dos cartas. Los comodines valen de 1 a 11 dependiendo de
-                          lo que necesite. Gana el primero en obtener un blackjack o quien no supere los 21 y obtenga más puntos.
+                            Es un juego de cartas, con una baraja inglesa de 52 cartas sin los comodines, que consiste
+                            en agregar
+                            un valor cercano a 21 pero sin pasar. Cada jugador en la mesa juega solo contra el crupier,
+                            tratando
+                            de obtener una mejor jugada que esta. El distribuidor está sujeto a reglas fijas que le
+                            impiden
+                            tomar decisiones sobre el juego. Por ejemplo, está obligado a pedir una carta siempre que su
+                            puntaje
+                            sea 16 o menos, y se le obliga a ponerse de pie si agrega 17 o más. Las cartas numéricas
+                            agregan su valor,
+                            las cifras suman 10 y el As vale 11 o 1, a elección del jugador. En el caso del croupier,
+                            los Ases valen
+                            11, mientras que no exceden de 21, y 1 de lo contrario. El mejor movimiento es obtener 21
+                            con solo dos
+                            cartas, esto es con una carta de valor más de As 10. Este movimiento se conoce como
+                            Blackjack o 21 natural.
+                            Un Blackjack gana sobre un 21 logrado con más de dos cartas. Los comodines valen de 1 a 11
+                            dependiendo de
+                            lo que necesite. Gana el primero en obtener un blackjack o quien no supere los 21 y obtenga
+                            más puntos.
                         </td>
                         <td>Junio 2016</td>
                         <td style="text-align: center"><img src="../Imagenes/blackjack.jpg" width="250px"></td>
@@ -121,26 +197,45 @@
                         <td>5</td>
                         <td>Timbiriche</td>
                         <td>
-                          Este juego se juega de dos a cuatro jugadores. Se dibuja un punto para cada esquina de lo que será un
-                          cuadrado. En cada juego, alternativamente, un jugador juntará dos puntos consecutivos horizontal o
-                          verticalmente; Los cuadrados están formados por lado, línea por línea, y las líneas diagonales no están
-                          permitidas en el juego. Cuando un jugador forma un cuadrado con estas líneas, esto se nota y se marca
-                          con un color distintivo. Después de formar un cuadrado, es el turno del siguiente jugador. El jugador
-                          que gana con más casillas gana el juego. La mecánica del juego comienza con la creación de un juego,
-                          al que se unirán los demás jugadores. El jugador que crea el juego avisa a los demás participantes
-                          para que puedan conectarse a través de la dirección IP. Cada jugador puede crear su propio juego.
-                          Al crear el juego, el tamaño del tablero se establece (m x m), de modo que cuando los otros jugadores se
-                          conectan, saben qué tamaño de tablero representan. Cada jugador pintará un tablero, y se reflejará en los
-                          tableros de los otros. Cada juego debe ser reportado a los otros participantes. Cada jugador conoce a los
-                          otros jugadores. Cada jugador elige su color, mientras que un jugador juega con los demás que tienen
-                          bloqueado el tablero, la pantalla de cada jugador refleja la cantidad de imágenes que obtendrán los
-                          demás participantes. El juego tiene un chat grupal que permite una comunicación constante entre
-                          los participantes. El chat depura la lista de jugadores. El chat debe permitir el envío de archivos
-                          a otro usuario, y el chat debe indicar que se realizó la operación. Y todo el chat se guarda en
-                          un archivo plano y, por lo tanto, tiene la opción de ver los chats guardados. Las jugadas realizadas
-                          se guardan en una base de datos. El sistema debe validar que los oponentes aún están en línea, y si dejan
-                          de estarlo, declararán al ganador al usuario que sigue en línea. El ganador es quién tiene más puntos
-                          o es el único en línea.
+                            Este juego se juega de dos a cuatro jugadores. Se dibuja un punto para cada esquina de lo
+                            que será un
+                            cuadrado. En cada juego, alternativamente, un jugador juntará dos puntos consecutivos
+                            horizontal o
+                            verticalmente; Los cuadrados están formados por lado, línea por línea, y las líneas
+                            diagonales no están
+                            permitidas en el juego. Cuando un jugador forma un cuadrado con estas líneas, esto se nota y
+                            se marca
+                            con un color distintivo. Después de formar un cuadrado, es el turno del siguiente jugador.
+                            El jugador
+                            que gana con más casillas gana el juego. La mecánica del juego comienza con la creación de
+                            un juego,
+                            al que se unirán los demás jugadores. El jugador que crea el juego avisa a los demás
+                            participantes
+                            para que puedan conectarse a través de la dirección IP. Cada jugador puede crear su propio
+                            juego.
+                            Al crear el juego, el tamaño del tablero se establece (m x m), de modo que cuando los otros
+                            jugadores se
+                            conectan, saben qué tamaño de tablero representan. Cada jugador pintará un tablero, y se
+                            reflejará en los
+                            tableros de los otros. Cada juego debe ser reportado a los otros participantes. Cada jugador
+                            conoce a los
+                            otros jugadores. Cada jugador elige su color, mientras que un jugador juega con los demás
+                            que tienen
+                            bloqueado el tablero, la pantalla de cada jugador refleja la cantidad de imágenes que
+                            obtendrán los
+                            demás participantes. El juego tiene un chat grupal que permite una comunicación constante
+                            entre
+                            los participantes. El chat depura la lista de jugadores. El chat debe permitir el envío de
+                            archivos
+                            a otro usuario, y el chat debe indicar que se realizó la operación. Y todo el chat se guarda
+                            en
+                            un archivo plano y, por lo tanto, tiene la opción de ver los chats guardados. Las jugadas
+                            realizadas
+                            se guardan en una base de datos. El sistema debe validar que los oponentes aún están en
+                            línea, y si dejan
+                            de estarlo, declararán al ganador al usuario que sigue en línea. El ganador es quién tiene
+                            más puntos
+                            o es el único en línea.
                         </td>
                         <td>Diciembre 2016</td>
                         <td style="text-align: center"><img src="../Imagenes/timbi.png" width="250px"></td>
